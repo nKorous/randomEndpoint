@@ -36,10 +36,12 @@ app.get('/testDB', async (req, res) => {
    let data = await client.query(`select * from users`, (err, res) => {
         if(err){
             return err
+            
         } else {
             return res
         }
     })
+    client.end()
 
     return data
 })
