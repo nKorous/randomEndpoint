@@ -8,7 +8,7 @@ let parse = require('pg-connection-string').parse
 
 let app = express()
 
-const dbConn = parse('postgres://jgjdfpyyfskizn:7cd369dbe45bb4929f4865a726382b049e0e77b057d58e99f76e5acc0dc46073@ec2-54-83-33-213.compute-1.amazonaws.com:5432/d91ts6v2ujvbdh')
+const dbConn = 'postgres://jgjdfpyyfskizn:7cd369dbe45bb4929f4865a726382b049e0e77b057d58e99f76e5acc0dc46073@ec2-54-83-33-213.compute-1.amazonaws.com:5432/d91ts6v2ujvbdh'
 const client = new Client({
     connectionString: dbConn
 })
