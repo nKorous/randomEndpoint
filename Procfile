@@ -1,2 +1,1 @@
-web: bin/web
-worker: bin/worker
+web: pm2 start index.js

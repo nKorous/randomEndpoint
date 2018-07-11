@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nf start"
   },
+  "engines": {
+    "node": "8.11.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nKorous/randomEndpoint.git"
@@ -23,6 +26,7 @@
     "dateformat": "^3.0.3",
     "express": "^4.16.3",
     "foreman": "3.0.1",
-    "moment": "^2.22.2"
+    "moment": "^2.22.2",
+    "pm2": "3.0.0"
   }
 }
