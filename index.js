@@ -30,7 +30,7 @@ app.get('/hello', async (req, res) => {
     res.status(200).send({"msg":"Hello World"})
 })
 
-app.get('testDB', async (req, res) => {
+app.get('/testDB', async (req, res) => {
     client.query(`select * from users`, (err, res) => {
         if(err){
             console.error(err)
