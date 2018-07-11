@@ -9,7 +9,9 @@ let parse = require('pg-connection-string').parse
 let app = express()
 
 const dbConn = parse('postgres://jgjdfpyyfskizn:7cd369dbe45bb4929f4865a726382b049e0e77b057d58e99f76e5acc0dc46073@ec2-54-83-33-213.compute-1.amazonaws.com:5432/d91ts6v2ujvbdh')
-const client = new Client()
+const client = new Client({
+    connectionString: dbConn
+})
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -29,12 +31,7 @@ app.get('/hello', async (req, res) => {
 })
 
 app.get('/testDB', async (req, res) => {
-    client.connect(dbConn)
-        .then(() => {
-            console.log('connected to db')
-        }).catch(err => {
-            console.log(err)
-        })
+    client.connect()
 
    let data = await client.query(`select * from users`, (err, res) => {
         if(err){
