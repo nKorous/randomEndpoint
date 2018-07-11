@@ -1,0 +1,19 @@
+{
+  "name": "randomendpoint",
+  "version": "1.0.0",
+  "description": "Random endpoint of random things for testing purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nKorous/randomEndpoint.git"
+  },
+  "author": "N.Korous",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/nKorous/randomEndpoint/issues"
+  },
+  "homepage": "https://github.com/nKorous/randomEndpoint#readme"
+}
