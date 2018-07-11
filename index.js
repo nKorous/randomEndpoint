@@ -29,13 +29,12 @@ app.get('/hello', async (req, res) => {
 })
 
 app.get('/testDB', async (req, res) => {
-    client.connect(dbConn, (err) => {
-        if(err){
-            console.log(err)
-        } else {
+    client.connect(dbConn)
+        .then(() => {
             console.log('connected to db')
-        }
-    })
+        }).catch(err => {
+            console.log(err)
+        })
 
    let data = await client.query(`select * from users`, (err, res) => {
         if(err){
