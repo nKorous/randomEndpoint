@@ -29,19 +29,3 @@ app.get('/', async (req, res) => {
 app.get('/hello', async (req, res) => {
     res.status(200).send({"msg":"Hello World"})
 })
-
-app.get('/testDB', async (req, res) => {
-    client.connect()
-
-   let data = await client.query(`select * from users`, (err, res) => {
-        if(err){
-            return err
-            
-        } else {
-            return res
-        }
-    })
-    client.end()
-
-    return data
-})
