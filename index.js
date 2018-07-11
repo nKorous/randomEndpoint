@@ -31,11 +31,13 @@ app.get('/hello', async (req, res) => {
 })
 
 app.get('/testDB', async (req, res) => {
-    client.query(`select * from users`, (err, res) => {
+   let data = await client.query(`select * from users`, (err, res) => {
         if(err){
-            console.error(err)
+            return err
         } else {
-            res.status(200).send(res)
+            return res
         }
     })
+
+    return data
 })
