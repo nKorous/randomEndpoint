@@ -11,7 +11,7 @@ const dbConn = 'postgres://jgjdfpyyfskizn:7cd369dbe45bb4929f4865a726382b049e0e77
 const client = new Client({
     connectionString: dbConn
 })
-await client.connect()
+client.connect()
 
 app.use(cors())
 app.use(bodyParser.json())
